@@ -1,22 +1,22 @@
 [
   {
     "ParameterKey": "ImageID",
-    "ParameterValue": "ami-30697651"
+    "ParameterValue": "ami-7c803d1c"
   }, 
   {
     "ParameterKey": "InstanceType",
-    "ParameterValue": "m3.medium"
+    "ParameterValue": "t2.micro"
   },
    {
     "ParameterKey": "KeyName",
-    "ParameterValue": "Training1"
+    "ParameterValue": "neeha1"
    },
   {
      "ParameterKey": "SubnetId",
-    "ParameterValue": "subnet-4a4a323c"
+    "ParameterValue": "subnet-a8ff45cf"
   },
   {
     "ParameterKey": "InstanceSecurityGroup",
-    "ParameterValue": "sg-18739161"
+    "ParameterValue": "sg-40fdbe38"
   }
 ]
