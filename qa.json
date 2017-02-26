@@ -9,14 +9,15 @@
   },
    {
     "ParameterKey": "KeyName",
-    "ParameterValue": "swetha-jenkins"
+    "ParameterValue": "Assign_hanumanth"
+
    },
   {
      "ParameterKey": "SubnetId",
-    "ParameterValue": "subnet-760bb011"
+    "ParameterValue": "subnet-4f07272b"
   },
   {
     "ParameterKey": "InstanceSecurityGroup",
-    "ParameterValue": "sg-8ac784f2"
+    "ParameterValue": "sg-10cad469"
   }
 ]
