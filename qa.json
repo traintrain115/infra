@@ -20,7 +20,7 @@
     "ParameterKey": "InstanceSecurityGroup",
     "ParameterValue": "sg-10cad469"
   },
-	"UserData": {
+  "UserData": {
 					"Fn::Base64": {
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
@@ -32,4 +32,5 @@
 
 						]]
 					}
+				}	
 ]
