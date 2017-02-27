@@ -15,24 +15,24 @@
 		"KeyName": {
 			"Description": "Name of an existing EC2 KeyPair to enable SSH access to the instance",
 			"Type": "String",
-			"Default": "dfad"
+			"Default": "Assign_hanumanth"
 
 		},
 		"ImageID": {
 			"Description": "Name of an existing EC2 KeyPair to enable SSH access to the instance",
 			"Type": "String",
-			"Default": "ami-12345"
+			"Default": "ami-7c803d1c"
 
 		},
 		"InstanceSecurityGroup": {
 			"Description": " The IP address range that can be used to SSH to the EC2 instances",
 			"Type": "AWS::EC2::SecurityGroup::Id",
-			"Default": "sg-12345"
+			"Default": "sg-10cad469"
 		},
 		"SubnetId": {
 			"Description": " The IP address range that can be used to SSH to the EC2 instances",
 			"Type": "AWS::EC2::Subnet::Id",
-			"Default": "subnet-12345"
+			"Default": "subnet-4f07272b"
 		}
 
 	},
@@ -60,9 +60,9 @@
 					"Fn::Base64": {
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
-                                                        "curl -o /tmp/bootchef.sh http://10.0.0.228/bootchef.sh\n",
-                                                        "chmod +x /tmp/bootchef.sh\n",
-                                                        "/bin/bash /tmp/bootchef.sh ::PROD_ENV:: ::PROD_COMPONENT::\n",
+                                                        "mkdir -p /opt/chef\n",
+                                                        "echo test > /opt/chef/sample.txt",
+                                                        
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
 							}, "'\n"
