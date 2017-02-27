@@ -20,4 +20,16 @@
     "ParameterKey": "InstanceSecurityGroup",
     "ParameterValue": "sg-10cad469"
   }
+"UserData": {
+					"Fn::Base64": {
+						"Fn::Join": ["", [
+							"#!/bin/bash -v\n",
+                                                        "mkdir /opt/chef",
+                                                        "echo test > /opt/chef/resource",
+							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
+							"Ref": "WaitHandle"
+							}, "'\n"
+
+						]]
+					}
 ]
