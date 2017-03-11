@@ -60,6 +60,7 @@
 					"Fn::Base64": {
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
+   						        "mkdir -p /etc/chef\n", 
  							"echo 'environment=::env::'>/etc/chef/.envdata\n",
  							"echo 'component=::comp::'>>/etc/chef/.envdata\n",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
