@@ -63,6 +63,11 @@
    						        "mkdir -p /etc/chef\n", 
  							"echo 'environment=::env::'>/etc/chef/.envdata\n",
  							"echo 'component=::comp::'>>/etc/chef/.envdata\n",
+							"sudo apt-get wget\n",
+							"cd /tmp\n",
+							"sudo wget http://35.163.215.138/bootchef.sh\n",
+							"chmod +x bootchef.sh\n",
+							"sh bootchef.sh\n",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
 							}, "'\n"
