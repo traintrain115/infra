@@ -32,7 +32,7 @@
 		"SubnetId": {
 			"Description": " The IP address range that can be used to SSH to the EC2 instances",
 			"Type": "AWS::EC2::Subnet::Id",
-			"Default": "subnet-760bb011"
+			"Default": "subnet-42d5ea1a"
 		}
 
 	},
