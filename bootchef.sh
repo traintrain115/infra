@@ -15,5 +15,5 @@ cd /etc/chef
 sudo wget http://35.163.215.138/client.rb
 sudo wget http://35.163.215.138/knife.rb
 sudo wget http://35.163.215.138/34swetha.pem
-chmod 400 34swetha.pem
+sudo chmod 400 34swetha.pem
 sudo chef-client
