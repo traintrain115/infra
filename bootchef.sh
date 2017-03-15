@@ -2,19 +2,18 @@
 
 sed -i s#Defaults.*requiretty#Defaults\ \!requiretty#g /etc/sudoers
 cd /tmp/
-echo "Downloading the rpm"
-wget  http://54.202.25.127/chef-12.19.36-1.el7.x86_64.rpm
-
+echo "Downloading the debian package"
+wget  http://35.163.215.138/chef_12.19.36-1_amd64.deb
 echo "Installating the rpm"
 
-sudo rpm -ivh *.rpm
+sudo dpkg -i *.deb
 
 sudo mkdir -p /etc/chef
 
 cd /etc/chef
 
-wget http://54.202.25.127/client.rb
-wget http://54.202.25.127/knife.rb
-wget http://54.202.25.127/sandykarhty20.pem
-chmod 400 sandykarhty.pem
+sudo wget http://35.163.215.138/client.rb
+sudo wget http://35.163.215.138/knife.rb
+sudo wget http://35.163.215.138/34swetha.pem
+chmod 400 34swetha.pem
 sudo chef-client
